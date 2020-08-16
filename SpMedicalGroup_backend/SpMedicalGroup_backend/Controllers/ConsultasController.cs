@@ -41,5 +41,23 @@ namespace SpMedicalGroup_backend.Controllers
                 return BadRequest($"Ocorreu um erro na requisição: [{ex.Message}]");
             }
         }
+
+        [HttpGet("medicos/{crm}")]
+        public IActionResult GetMedicoConsultaByRM(string crm)
+        {
+            try
+            {
+                var medico = consultaQueries.GetMedicoByConsultaRm(crm);
+
+                if (medico == null)
+                    return StatusCode(204, "Não foi encontrado um médico que já tenha realizado consultas com este RM");
+                else
+                    return StatusCode(200, medico);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ocorreu um erro na requisição: [{ex.Message}]");
+            }
+        }
     }
 }

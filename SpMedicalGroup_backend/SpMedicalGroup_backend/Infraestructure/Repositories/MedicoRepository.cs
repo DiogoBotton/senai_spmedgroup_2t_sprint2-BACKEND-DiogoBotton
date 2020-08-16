@@ -28,5 +28,10 @@ namespace SpMedicalGroup_backend.Infraestructure.Repositories
         {
             return _context.Medicos.FirstOrDefault(x => x.Id == id);
         }
+
+        public List<Medico> GetAll()
+        {
+            return _context.Medicos.ToList();
+        }
     }
 }

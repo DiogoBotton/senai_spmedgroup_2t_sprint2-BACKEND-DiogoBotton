@@ -10,5 +10,6 @@ namespace SpMedicalGroup_backend.Interfaces
     public interface IMedicoRepository : IRepository<Medico>
     {
         Medico GetById(long id);
+        List<Medico> GetAll();
     }
 }

@@ -76,5 +76,21 @@ namespace SpMedicalGroup_backend.Queries.QueriesViewModels
 
             return consultasVM;
         }
+
+        public MedicoViewModel GetMedicoByConsultaRm(string crm)
+        {
+            var consultas = consultaRepository.GetAll();
+
+            var medicos = medicoRepository.GetAll();
+
+            consultas.ForEach(x =>
+            {
+                medicos.RemoveAll(m => m.Id != x.MedicoId);
+            });
+
+            var medicoVM = _mapper.Map<MedicoViewModel>(medicos.FirstOrDefault(x => x.CRM == crm));
+
+            return medicoVM;
+        }
     }
 }

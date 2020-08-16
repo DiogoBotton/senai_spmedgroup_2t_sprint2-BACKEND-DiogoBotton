@@ -9,5 +9,6 @@ namespace SpMedicalGroup_backend.Queries.Interfaces
     public interface IConsultaQueries
     {
         List<ConsultaViewModel> GetAllConsultasCompletas();
+        MedicoViewModel GetMedicoByConsultaRm(string crm);
     }
 }
