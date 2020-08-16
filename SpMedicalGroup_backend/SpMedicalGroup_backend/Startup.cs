@@ -12,6 +12,7 @@ using SpMedicalGroup_backend.Infraestructure.Contexts;
 using SpMedicalGroup_backend.Helpers;
 using SpMedicalGroup_backend.Infraestructure.Repositories;
 using SpMedicalGroup_backend.Interfaces;
+using AutoMapper;
 
 namespace SpMedicalGroup_backend
 {
@@ -26,7 +27,11 @@ namespace SpMedicalGroup_backend
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // Configura o AutoMapper
+            // E onde irá encontrar os Profiles (perfis)
+            services.AddAutoMapper(typeof(Startup).Assembly);
 
             //DependencyInjecions(DI) Vinculando a dependencia da classe repository com a InterfaceRepository
             //Em outras palavras, você pode usar a implementação dos métodos do repository, apenas instanciando... A interface! loucura neh? Foi o que eu pensei também!
