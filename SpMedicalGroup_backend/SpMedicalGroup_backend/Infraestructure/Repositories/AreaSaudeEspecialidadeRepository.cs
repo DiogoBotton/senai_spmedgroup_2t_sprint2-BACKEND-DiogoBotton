@@ -9,29 +9,24 @@ using System.Threading.Tasks;
 
 namespace SpMedicalGroup_backend.Infraestructure.Repositories
 {
-    public class TipoUsuarioRepository : ITipoUsuarioRepository
+    public class AreaSaudeEspecialidadeRepository : IAreaSaudeEspecialidadeRepository
     {
         public SpMedGroupContext _context;
         public IUnitOfWork UnitOfWork => _context;
 
-        public TipoUsuarioRepository(SpMedGroupContext context)
+        public AreaSaudeEspecialidadeRepository(SpMedGroupContext context)
         {
             _context = context;
         }
 
-        public TipoUsuario Create(TipoUsuario objeto)
+        public AreaSaudeEspecialidade Create(AreaSaudeEspecialidade objeto)
         {
-            return _context.TiposUsuarios.Add(objeto).Entity;
+            return _context.AreasSaudeEspecialidades.Add(objeto).Entity;
         }
 
-        public TipoUsuario FindByDescricao(string titulo)
+        public AreaSaudeEspecialidade GetById(long id)
         {
-            return _context.TiposUsuarios.FirstOrDefault(x => x.Titulo == titulo);
-        }
-
-        public TipoUsuario GetById(long id)
-        {
-            return _context.TiposUsuarios.FirstOrDefault(x => x.Id == id);
+            return _context.AreasSaudeEspecialidades.FirstOrDefault(x => x.Id == id);
         }
     }
 }

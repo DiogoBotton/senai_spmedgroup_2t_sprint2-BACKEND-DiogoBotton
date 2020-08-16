@@ -10,5 +10,6 @@ namespace SpMedicalGroup_backend.Interfaces
     public interface IUsuarioRepository : IRepository<Usuario>
     {
         Usuario FindByEmail(string email);
+        Usuario GetById(long id);
     }
 }

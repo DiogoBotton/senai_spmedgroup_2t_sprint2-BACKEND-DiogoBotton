@@ -13,17 +13,18 @@ using SpMedicalGroup_backend.Helpers;
 using SpMedicalGroup_backend.Infraestructure.Repositories;
 using SpMedicalGroup_backend.Interfaces;
 using AutoMapper;
+using SpMedicalGroup_backend.Queries.Interfaces;
+using SpMedicalGroup_backend.Queries.QueriesViewModels;
 
 namespace SpMedicalGroup_backend
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
+        public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -38,6 +39,14 @@ namespace SpMedicalGroup_backend
             services.AddScoped<IStatusConsultaRepository, StatusConsultaRepository>();
             services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IConsultaRepository, ConsultaRepository>();
+            services.AddScoped<IMedicoRepository, MedicoRepository>();
+            services.AddScoped<IProntuarioPacienteRepository, ProntuarioPacienteRepository>();
+            services.AddScoped<IAreaSaudeEspecialidadeRepository, AreaSaudeEspecialidadeRepository>();
+            services.AddScoped<IClinicaRepository, ClinicaRepository>();
+
+            // Vinculando Interfaces Queries com a implementação Queries
+            services.AddTransient<IConsultaQueries, ConsultaQueries>();
 
             //**
             //Configurações da DB

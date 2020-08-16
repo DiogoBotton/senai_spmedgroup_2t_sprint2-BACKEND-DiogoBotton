@@ -4,20 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SpMedicalGroup_backend.ViewModels
+namespace SpMedicalGroup_backend.Application.Queries.ViewModels
 {
-    public class StatusConsultaViewModel
+    public class AreaSaudeEspecialidadeViewModel
     {
         public long Id { get; set; }
         public string Titulo { get; set; }
-
-        public StatusConsultaViewModel()
+        public AreaSaudeEspecialidadeViewModel()
         {
 
-        }
-        public StatusConsultaViewModel(string titulo)
-        {
-            Titulo = titulo;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using SpMedicalGroup_backend.Application.Queries.ViewModels;
 using SpMedicalGroup_backend.Domains;
-using SpMedicalGroup_backend.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +29,10 @@ namespace SpMedicalGroup_backend.Infraestructure.ProfileAutoMapper
                 .ForPath(s => s.ProntuarioPaciente.Id, d => d.MapFrom(d => d.ProntuarioPacienteId))
                 .ForPath(s => s.StatusConsulta.Id, d => d.MapFrom(d => d.StatusConsultaId));
 
+            CreateMap<StatusConsulta, StatusConsultaViewModel>();
+            CreateMap<TipoUsuario, TipoUsuarioViewModel>();
+            CreateMap<Clinica, ClinicaViewModel>();
+            CreateMap<AreaSaudeEspecialidade, AreaSaudeEspecialidadeViewModel>();
         }
     }
 }

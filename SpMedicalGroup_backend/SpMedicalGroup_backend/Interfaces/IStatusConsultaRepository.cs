@@ -10,5 +10,6 @@ namespace SpMedicalGroup_backend.Interfaces
     public interface IStatusConsultaRepository : IRepository<StatusConsulta>
     {
         StatusConsulta FindByDescricao(string descricao);
+        StatusConsulta FindById(long id);
     }
 }

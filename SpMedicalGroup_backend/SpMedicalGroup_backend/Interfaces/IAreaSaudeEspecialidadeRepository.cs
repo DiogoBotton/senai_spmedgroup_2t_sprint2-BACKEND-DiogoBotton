@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace SpMedicalGroup_backend.Interfaces
 {
-    public interface ITipoUsuarioRepository : IRepository<TipoUsuario>
+    public interface IAreaSaudeEspecialidadeRepository : IRepository<AreaSaudeEspecialidade>
     {
-        TipoUsuario FindByDescricao(string titulo);
-        TipoUsuario GetById(long id);
+        AreaSaudeEspecialidade GetById(long id);
     }
 }

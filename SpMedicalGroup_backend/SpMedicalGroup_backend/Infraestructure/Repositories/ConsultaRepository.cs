@@ -9,29 +9,24 @@ using System.Threading.Tasks;
 
 namespace SpMedicalGroup_backend.Infraestructure.Repositories
 {
-    public class TipoUsuarioRepository : ITipoUsuarioRepository
+    public class ConsultaRepository : IConsultaRepository
     {
         public SpMedGroupContext _context;
         public IUnitOfWork UnitOfWork => _context;
 
-        public TipoUsuarioRepository(SpMedGroupContext context)
+        public ConsultaRepository(SpMedGroupContext context)
         {
             _context = context;
         }
 
-        public TipoUsuario Create(TipoUsuario objeto)
+        public Consulta Create(Consulta objeto)
         {
-            return _context.TiposUsuarios.Add(objeto).Entity;
+            return _context.Consultas.Add(objeto).Entity;
         }
 
-        public TipoUsuario FindByDescricao(string titulo)
+        public List<Consulta> GetAll()
         {
-            return _context.TiposUsuarios.FirstOrDefault(x => x.Titulo == titulo);
-        }
-
-        public TipoUsuario GetById(long id)
-        {
-            return _context.TiposUsuarios.FirstOrDefault(x => x.Id == id);
+            return _context.Consultas.ToList();
         }
     }
 }

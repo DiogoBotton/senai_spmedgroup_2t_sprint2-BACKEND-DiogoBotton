@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SpMedicalGroup_backend.ViewModels
+namespace SpMedicalGroup_backend.Application.Queries.ViewModels
 {
     public class ConsultaViewModel
     {

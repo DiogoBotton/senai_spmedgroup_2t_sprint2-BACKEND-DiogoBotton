@@ -28,5 +28,10 @@ namespace SpMedicalGroup_backend.Infraestructure.Repositories
         {
             return _context.Usuarios.FirstOrDefault(x => x.Email == email);
         }
+
+        public Usuario GetById(long id)
+        {
+            return _context.Usuarios.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

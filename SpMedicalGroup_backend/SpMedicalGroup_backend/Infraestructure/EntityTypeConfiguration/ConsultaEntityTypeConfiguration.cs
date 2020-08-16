@@ -26,11 +26,11 @@ namespace SpMedicalGroup_backend.Infraestructure.EntityTypeConfiguration
                  .WithMany()
                  .HasForeignKey("StatusConsultaId")
                  .IsRequired();
-
+            
             builder.HasOne<ProntuarioPaciente>()
                 .WithMany()
                 .HasForeignKey("ProntuarioPacienteId")
                 .IsRequired();
+            }
         }
-    }
 }

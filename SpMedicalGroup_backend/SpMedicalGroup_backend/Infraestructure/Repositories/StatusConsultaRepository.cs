@@ -28,5 +28,10 @@ namespace SpMedicalGroup_backend.Infraestructure.Repositories
         {
             return _context.StatusConsultas.FirstOrDefault(x => x.Titulo == descricao);
         }
+
+        public StatusConsulta FindById(long id)
+        {
+            return _context.StatusConsultas.FirstOrDefault(x => x.Id == id);
+        }
     }
 }
