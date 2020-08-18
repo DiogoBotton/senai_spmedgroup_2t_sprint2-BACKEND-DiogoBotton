@@ -1,20 +1,20 @@
-﻿using System;
+﻿using SpMedicalGroup_Domain.SeedWork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SpMedicalGroup_backend.Application.Queries.ViewModels
+namespace SpMedicalGroup_Domain.Domains
 {
-    public class ProntuarioPacienteViewModel
+    public class ProntuarioPaciente : AbstractDomain
     {
-        public long Id { get; set; }
         public string RG { get; set; }
         public string Endereco { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Telefone { get; set; }
-        public UsuarioViewModel Usuario { get; set; }
+        public long UsuarioId { get; set; }
 
-        public ProntuarioPacienteViewModel()
+        public ProntuarioPaciente()
         {
 
         }

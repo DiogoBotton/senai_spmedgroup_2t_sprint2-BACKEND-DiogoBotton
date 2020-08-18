@@ -7,7 +7,6 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SpMedicalGroup_backend.Infraestructure.Contexts;
-using SpMedicalGroup_backend.Interfaces;
 using SpMedicalGroup_backend.Queries.Interfaces;
 
 namespace SpMedicalGroup_backend.Controllers

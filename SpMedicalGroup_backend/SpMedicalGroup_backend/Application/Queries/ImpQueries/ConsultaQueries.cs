@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using SpMedicalGroup_backend.Application.Queries.ViewModels;
-using SpMedicalGroup_backend.Interfaces;
 using SpMedicalGroup_backend.Queries.Interfaces;
+using SpMedicalGroup_Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

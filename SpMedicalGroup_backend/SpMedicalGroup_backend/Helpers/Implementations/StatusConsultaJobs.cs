@@ -1,6 +1,6 @@
 ﻿using SpMedicalGroup_backend.DefaultValues;
-using SpMedicalGroup_backend.Domains;
-using SpMedicalGroup_backend.Interfaces;
+using SpMedicalGroup_Domain.Domains;
+using SpMedicalGroup_Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

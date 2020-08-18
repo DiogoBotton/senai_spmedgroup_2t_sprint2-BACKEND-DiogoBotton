@@ -11,10 +11,10 @@ using Microsoft.Extensions.Configuration;
 using SpMedicalGroup_backend.Infraestructure.Contexts;
 using SpMedicalGroup_backend.Helpers;
 using SpMedicalGroup_backend.Infraestructure.Repositories;
-using SpMedicalGroup_backend.Interfaces;
 using AutoMapper;
 using SpMedicalGroup_backend.Queries.Interfaces;
 using SpMedicalGroup_backend.Queries.QueriesViewModels;
+using SpMedicalGroup_Domain.Interfaces;
 
 namespace SpMedicalGroup_backend
 {

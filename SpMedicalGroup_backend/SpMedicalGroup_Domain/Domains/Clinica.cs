@@ -1,13 +1,13 @@
-﻿using System;
+﻿using SpMedicalGroup_Domain.SeedWork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SpMedicalGroup_backend.Application.Queries.ViewModels
+namespace SpMedicalGroup_Domain.Domains
 {
-    public class ClinicaViewModel
+    public class Clinica : AbstractDomain
     {
-        public long Id { get; set; }
         public string Endereco { get; set; }
         public string NomeFantasia { get; set; }
         public string RazaoSocial { get; set; }
@@ -15,7 +15,7 @@ namespace SpMedicalGroup_backend.Application.Queries.ViewModels
         public DateTime HoraFuncionamentoFim { get; set; }
         public string CNPJ { get; set; }
 
-        public ClinicaViewModel()
+        public Clinica()
         {
 
         }
