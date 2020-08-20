@@ -5,9 +5,12 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SpMedicalGroup_backend.Application.InputRequests;
 using SpMedicalGroup_backend.Infraestructure.Contexts;
 using SpMedicalGroup_backend.Queries.Interfaces;
+using SpMedicalGroup_Domain.Domains;
 
 namespace SpMedicalGroup_backend.Controllers
 {
